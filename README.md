@@ -36,8 +36,12 @@ Access: http://localhost:8080/sb-inventory-service/swagger-ui/index.html or http
 
 ---
 ### Run with Docker:
+#### Build Docker Image:
 ```dockerfile
 docker build -t sb-inventory-service .
+```
+#### Run the Container:
+```dockerfile
 docker run --name sb-inventory-service-container -p 8080:8080 sb-inventory-service
 ```
 Access: http://localhost:8080/sb-inventory-service/swagger-ui/index.html or http://localhost:8080/sb-inventory-service/api/v1/status
