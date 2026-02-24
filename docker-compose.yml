@@ -1,0 +1,12 @@
+services:
+  sb-inventory-service:
+    build:
+      context: . # Project root as context
+      dockerfile: Dockerfile
+    image: sb-inventory-service
+    container_name: sb-inventory-service-container
+    ports:
+      - "8080:8080"  # Expose Spring Boot API externally
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+    restart: unless-stopped
